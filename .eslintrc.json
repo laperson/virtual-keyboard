@@ -1,1 +1,7 @@
-{"extends": "airbnb-base"}
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "import/extensions": [ "error", { "js": "always" } ]
+  },
+  "env": { "browser": true }
+}
