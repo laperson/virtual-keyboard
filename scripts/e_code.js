@@ -55,7 +55,7 @@ export default
     },
 
     ru: {
-      regular: '5',
+      regular: '4',
       shift: '%',
     },
   },
@@ -362,7 +362,7 @@ export default
 
   KeyA: {
     en: {
-      regular: 'A',
+      regular: 'a',
       shift: '',
     },
 

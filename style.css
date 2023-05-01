@@ -18,14 +18,14 @@
 }
 .keyboard {
   margin: 10px auto 0;
-  width: 710px;
+  width: 715px;
   height: 250px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 4px;
-  background-color: rgb(44, 10, 79);
+  background-color: #474955;
   border-radius: 10px;
 }
 .key {
@@ -34,21 +34,49 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(124, 62, 186);
-  border-radius: 10px;
+  background-color: #a9a9a8;
+  color: #e3e3e3;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  user-select: none;
+  transition: all 0.2s;
+}
+.key:hover {
+  color: #fffefe;
+  background-color: #c4c4c2;
+  cursor: pointer;
+}
+.key:active {
+  background-color: #a9a9a8;
+  transition: none;
 }
 .tab {
   width: 50px;
 }
 .backspace ,
-.capslock,
-.enter,
-.shiftleft {
+.capslock {
   width: 100px;
 }
 .space {
   width: 330px;
 }
-.shiftright {
-  width: 105px;
+
+.delete {
+  background-color: #d41131;
+}
+.shiftright,
+.shiftleft {
+  width: 100px;
+  background-color: #e4cd03e4;
+}
+.enter {
+  width: 100px;
+  background-color: #3b74e8;
+}
+.active {
+  background-color: #d4d4d1;
+  transition: none;
+  color: #fffefe;
 }

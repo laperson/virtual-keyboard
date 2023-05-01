@@ -14,9 +14,10 @@ document.body.innerHTML = `<div class="wrapper">
                              </main>
                            </div>`;
 
+if (document.cookie === '') document.cookie = 'lang=en';
 Object.keys(eCode).forEach((el) => {
   const key = document.createElement('div');
-  key.append(eCode[el].en.regular);
+  key.append(eCode[el][document.cookie === 'lang=ru' ? 'ru' : 'en'].regular);
   key.className = `key ${el.toLocaleLowerCase()}`;
   document.querySelector('.keyboard').append(key);
 });
