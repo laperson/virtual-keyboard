@@ -40,8 +40,8 @@ document.addEventListener('keydown', (e) => {
 document.addEventListener('keyup', (e) => {
   if (e.key === 'Shift') {
     if (document.cookie === 'lang=en') {
-      backKeys('ru');
-    } backKeys('en');
+      backKeys('en');
+    } else backKeys('ru');
     if (capss() === 'off') {
       capsLockDown();
     } else capsLockUp();
