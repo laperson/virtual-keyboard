@@ -9,7 +9,7 @@ document.addEventListener('keydown', (e) => {
   document.addEventListener('keyup', () => key.classList.remove('active'));
 });
 
-function switchLang(lang) {
+export default function switchLang(lang) {
   const key = document.querySelectorAll('.key');
   Object.values(eCode).forEach((lan, i) => {
     key[i].innerHTML = lan[lang].regular;

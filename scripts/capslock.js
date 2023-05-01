@@ -1,7 +1,10 @@
 import eCode from './e_code.js';
 
 let caps = 'off';
-function capsLockUp() {
+export function capss() {
+  return caps;
+}
+export function capsLockUp() {
   Object.entries(eCode).forEach(([key, val]) => {
     if (val.ru.shift === '') {
       document.getElementsByClassName(key.toLowerCase())[0].style.textTransform = 'uppercase';
@@ -9,7 +12,7 @@ function capsLockUp() {
   });
 }
 
-function capsLockDown() {
+export function capsLockDown() {
   Object.entries(eCode).forEach(([key, val]) => {
     if (val.ru.shift === '') {
       document.getElementsByClassName(key.toLowerCase())[0].style.textTransform = '';
