@@ -1,6 +1,9 @@
 import eCode from './e_code.js';
 
+const field = document.querySelector('.field');
+
 document.addEventListener('keydown', (e) => {
+  field.focus();
   const key = document.getElementsByClassName(e.code.toLowerCase())[0];
   key.classList.add('active');
   document.addEventListener('keyup', () => key.classList.remove('active'));
