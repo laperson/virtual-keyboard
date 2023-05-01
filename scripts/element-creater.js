@@ -14,8 +14,9 @@ document.body.innerHTML = `<div class="wrapper">
                              </main>
                            </div>`;
 
-eCode.forEach((el) => {
+Object.keys(eCode).forEach((el) => {
   const key = document.createElement('div');
+  key.append(eCode[el].en.regular);
   key.className = `key ${el.toLocaleLowerCase()}`;
   document.querySelector('.keyboard').append(key);
 });
