@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 .wrapper {
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
 }
 .header {
@@ -26,20 +26,29 @@
   flex-wrap: wrap;
   gap: 4px;
   background-color: rgb(44, 10, 79);
+  border-radius: 10px;
 }
 .key {
   width: 40px;
   height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(124, 62, 186);
   border-radius: 10px;
+}
+.tab {
+  width: 50px;
 }
 .backspace ,
 .capslock,
 .enter,
-.shiftright,
 .shiftleft {
   width: 100px;
 }
 .space {
   width: 330px;
+}
+.shiftright {
+  width: 105px;
 }
