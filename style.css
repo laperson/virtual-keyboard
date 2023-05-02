@@ -15,6 +15,7 @@
   border-radius: 20px;
   resize: none;
   padding: 5px 15px;
+  outline: none;
 }
 .keyboard {
   margin: 10px auto 0;

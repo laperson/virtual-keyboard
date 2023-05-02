@@ -698,12 +698,12 @@ export default
 
   Space: {
     en: {
-      regular: '',
+      regular: ' ',
       shift: '',
     },
 
     ru: {
-      regular: '',
+      regular: ' ',
       shift: '',
     },
   },

@@ -2,6 +2,7 @@ import { capss, capsLockUp, capsLockDown } from './capslock.js';
 import eCode from './e_code.js';
 import backKeys from './main.js';
 
+let sw = 'off';
 function shift(lang) {
   const key = document.querySelectorAll('.key');
   Object.values(eCode).forEach((l, i) => {
@@ -24,6 +25,7 @@ function lostKeys(lang) {
 
 document.addEventListener('keydown', (e) => {
   if (e.shiftKey) {
+    sw = 'on';
     if (document.cookie === 'lang=en') {
       shift('en');
       lostKeys('en');
@@ -38,6 +40,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.addEventListener('keyup', (e) => {
+  sw = 'off';
   if (e.key === 'Shift') {
     if (document.cookie === 'lang=en') {
       backKeys('en');
@@ -47,3 +50,7 @@ document.addEventListener('keyup', (e) => {
     } else capsLockUp();
   }
 });
+
+export default function swTo() {
+  return sw;
+}
