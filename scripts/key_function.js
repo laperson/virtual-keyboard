@@ -18,3 +18,52 @@ key.forEach((el) => {
     field.selectionEnd = cursor;
   });
 });
+
+document.querySelector('.tab').addEventListener('click', () => {
+  let cursor = field.selectionStart;
+  const space = '  ';
+  field.value = field.value.slice(0, field.selectionStart)
+  + space + field.value.slice(field.selectionStart);
+  cursor += 2;
+  field.selectionStart = cursor;
+  field.selectionEnd = cursor;
+});
+
+document.querySelector('.backspace').addEventListener('click', () => {
+  let cursor = field.selectionStart;
+  field.value = field.value.slice(0, field.selectionStart - 1)
+  + field.value.slice(field.selectionStart);
+  cursor -= 1;
+  field.selectionStart = cursor;
+  field.selectionEnd = cursor;
+});
+
+document.querySelector('.delete').addEventListener('click', () => {
+  const cursor = field.selectionStart;
+  field.value = field.value.slice(0, field.selectionStart)
+  + field.value.slice(field.selectionStart + 1);
+  field.selectionStart = cursor;
+  field.selectionEnd = cursor;
+});
+
+document.querySelector('.enter').addEventListener('click', () => {
+  let cursor = field.selectionStart;
+  const space = '\n';
+  field.value = field.value.slice(0, field.selectionStart)
+  + space + field.value.slice(field.selectionStart);
+  cursor += 1;
+  field.selectionStart = cursor;
+  field.selectionEnd = cursor;
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.code === 'Tab') {
+    let cursor = field.selectionStart;
+    const space = '  ';
+    field.value = field.value.slice(0, field.selectionStart)
+    + space + field.value.slice(field.selectionStart);
+    cursor += 2;
+    field.selectionStart = cursor;
+    field.selectionEnd = cursor;
+  }
+});

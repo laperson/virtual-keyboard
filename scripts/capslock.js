@@ -31,3 +31,13 @@ document.addEventListener('keydown', (e) => {
     }
   }
 });
+
+document.querySelector('.capslock').addEventListener('click', () => {
+  if (caps === 'off') {
+    capsLockUp();
+    caps = 'on';
+  } else {
+    capsLockDown();
+    caps = 'off';
+  }
+});

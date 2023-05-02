@@ -16,6 +16,7 @@
   resize: none;
   padding: 5px 15px;
   outline: none;
+  font-size: 20px;
 }
 .keyboard {
   margin: 10px auto 0;
@@ -69,15 +70,20 @@
 }
 .shiftright,
 .shiftleft {
-  width: 100px;
+  width: 85px;
   background-color: #e4cd03e4;
 }
 .enter {
-  width: 100px;
+  width: 85px;
   background-color: #3b74e8;
 }
 .active {
   background-color: #d4d4d1;
   transition: none;
   color: #fffefe;
+}
+
+.text_descript {
+  font-size: 17px;
+  margin: 13px;
 }
