@@ -5,7 +5,7 @@ document.body.innerHTML = `<div class="wrapper">
                                <h1 class="text_header">RSS Virtual Keyboard</h1>
                                <div class="contain_descript">
                                  <p class="text_descript">The keyboard was created in the Windows operating system.</p>
-                                 <p class="text_descript">To switch the language, the combination is: <b>left ctrl + alt</b>.</p>
+                                 <p class="text_descript">To switch the language, the combination is: <b>ctrl + alt</b>.</p>
                                </div>
                              </header>
                              <main class="main">
