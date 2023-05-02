@@ -6,6 +6,7 @@ document.addEventListener('keydown', (e) => {
   if (e.altKey || e.code === 'Tab') e.preventDefault();
   field.focus();
   const key = document.getElementsByClassName(e.code.toLowerCase())[0];
+  if (key === undefined) return;
   key.classList.add('active');
   document.addEventListener('keyup', () => key.classList.remove('active'));
 });
