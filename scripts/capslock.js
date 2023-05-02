@@ -25,9 +25,11 @@ document.addEventListener('keydown', (e) => {
     if (caps === 'off') {
       capsLockUp();
       caps = 'on';
+      document.querySelector('.capslock').style.backgroundColor = '#d41131';
     } else {
       capsLockDown();
       caps = 'off';
+      document.querySelector('.capslock').style.backgroundColor = '';
     }
   }
 });
