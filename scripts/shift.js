@@ -2,6 +2,8 @@ import { capss, capsLockUp, capsLockDown } from './capslock.js';
 import eCode from './e_code.js';
 import backKeys from './main.js';
 
+const shiftKey = document.querySelectorAll('.shiftright, .shiftleft');
+
 let sw = 'off';
 function shift(lang) {
   const key = document.querySelectorAll('.key');
@@ -54,3 +56,30 @@ document.addEventListener('keyup', (e) => {
 export default function swTo() {
   return sw;
 }
+
+shiftKey.forEach((el) => {
+  el.addEventListener('mousedown', () => {
+    sw = 'on';
+    if (document.cookie === 'lang=en') {
+      shift('en');
+      lostKeys('en');
+    } else {
+      shift('ru');
+      lostKeys('ru');
+    }
+    if (capss() === 'off') {
+      capsLockUp();
+    } else capsLockDown();
+  });
+});
+
+shiftKey.forEach((el) => {
+  el.addEventListener('mouseup', () => {
+    if (document.cookie === 'lang=en') {
+      backKeys('en');
+    } else backKeys('ru');
+    if (capss() === 'off') {
+      capsLockDown();
+    } else capsLockUp();
+  });
+});
